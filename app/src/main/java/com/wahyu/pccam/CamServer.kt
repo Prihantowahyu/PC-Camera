@@ -70,7 +70,7 @@ class CamServer(port: Int) : NanoHTTPD(port) {
                     r
                 }
             }
-            "/delete" -> { svc?.deleteFile(parms["name"]); ok() }
+            "/delete" -> { svc?.deleteRecording(parms["name"]); ok() }
             else -> newFixedLengthResponse(Response.Status.NOT_FOUND, "text/plain", "404")
         }
     }
