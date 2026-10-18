@@ -237,7 +237,7 @@ class CamService : LifecycleService() {
         return File(dir(), n)
     }
 
-    fun deleteFile(name: String?): Boolean {
+    fun deleteRecording(name: String?): Boolean {
         val f = fileFor(name) ?: return false
         return f.exists() && f.delete()
     }
